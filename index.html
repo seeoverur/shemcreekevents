@@ -1,0 +1,2427 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>Shem Creek Events | Restaurants, Businesses and Things to Do</title>
+
+    <meta
+        name="description"
+        content="Explore Shem Creek restaurants, waterfront businesses, boat tours, kayak rentals, seafood markets, live music and events in Mount Pleasant, South Carolina."
+    >
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+
+    <style>
+        :root {
+            --creek-blue: #155d73;
+            --creek-dark: #123845;
+            --creek-deep: #0a2832;
+            --marsh-green: #456b51;
+            --marsh-light: #edf4ef;
+            --sand: #f4e3c3;
+            --sand-light: #fff9ee;
+            --sunset: #df8248;
+            --white: #ffffff;
+            --text-dark: #263238;
+            --muted-text: #66757c;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--text-dark);
+            background-color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+        }
+
+        section {
+            scroll-margin-top: 78px;
+        }
+
+        .navbar {
+            background-color: rgba(10, 40, 50, 0.97) !important;
+        }
+
+        .navbar-brand {
+            font-size: 1.35rem;
+            font-weight: 900;
+            letter-spacing: 0.02rem;
+        }
+
+        .navbar-brand i {
+            color: var(--sand);
+        }
+
+        .nav-link {
+            font-weight: 700;
+        }
+
+        .hero {
+            min-height: 680px;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            background:
+                radial-gradient(
+                    circle at top right,
+                    rgba(223, 130, 72, 0.55),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    rgba(10, 40, 50, 0.97),
+                    rgba(21, 93, 115, 0.92)
+                );
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            position: absolute;
+            right: -160px;
+            bottom: -210px;
+            width: 560px;
+            height: 560px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            content: "";
+        }
+
+        .hero::after {
+            position: absolute;
+            top: -190px;
+            left: -160px;
+            width: 440px;
+            height: 440px;
+            background-color: rgba(255, 255, 255, 0.04);
+            border-radius: 50%;
+            content: "";
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-label {
+            display: inline-block;
+            padding: 8px 17px;
+            margin-bottom: 22px;
+            color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.13);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 50rem;
+            font-size: 0.86rem;
+            font-weight: 800;
+            letter-spacing: 0.1rem;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            max-width: 1000px;
+            font-size: clamp(2.7rem, 7vw, 5.6rem);
+            font-weight: 900;
+            line-height: 1.02;
+        }
+
+        .hero .lead {
+            max-width: 900px;
+            margin-top: 27px;
+            font-size: 1.22rem;
+        }
+
+        .hero-stat {
+            height: 100%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            backdrop-filter: blur(8px);
+        }
+
+        .hero-stat strong {
+            display: block;
+            margin-bottom: 3px;
+            color: var(--sand);
+            font-size: 1.25rem;
+        }
+
+        .section-padding {
+            padding: 85px 0;
+        }
+
+        .section-heading {
+            max-width: 880px;
+            margin-bottom: 45px;
+        }
+
+        .section-heading-centered {
+            max-width: 880px;
+            margin: 0 auto 45px;
+            text-align: center;
+        }
+
+        .section-label {
+            margin-bottom: 8px;
+            color: var(--sunset);
+            font-size: 0.85rem;
+            font-weight: 900;
+            letter-spacing: 0.1rem;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            color: var(--creek-dark);
+            font-weight: 900;
+        }
+
+        .cream-section {
+            background-color: var(--sand-light);
+        }
+
+        .marsh-section {
+            background-color: var(--marsh-light);
+        }
+
+        .blue-section {
+            color: #ffffff;
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--creek-dark),
+                    var(--creek-blue)
+                );
+        }
+
+        .blue-section .section-title,
+        .blue-section .section-label {
+            color: #ffffff;
+        }
+
+        .intro-panel {
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 22px;
+            box-shadow: 0 12px 35px rgba(18, 56, 69, 0.09);
+        }
+
+        .intro-list {
+            padding-left: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .intro-list li {
+            position: relative;
+            padding: 11px 0 11px 30px;
+            border-bottom: 1px solid #e7ecee;
+        }
+
+        .intro-list li:last-child {
+            border-bottom: 0;
+        }
+
+        .intro-list li i {
+            position: absolute;
+            top: 13px;
+            left: 0;
+            color: var(--creek-blue);
+        }
+
+        .directory-alert {
+            padding: 20px 24px;
+            color: #4d3d27;
+            background-color: #fff1d5;
+            border-left: 5px solid var(--sunset);
+            border-radius: 12px;
+        }
+
+        .restaurant-card,
+        .business-card,
+        .event-card,
+        .mention-card {
+            height: 100%;
+            overflow: hidden;
+            background-color: #ffffff;
+            border: 0;
+            border-radius: 19px;
+            box-shadow: 0 10px 30px rgba(18, 56, 69, 0.09);
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .restaurant-card:hover,
+        .business-card:hover,
+        .event-card:hover,
+        .mention-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 17px 38px rgba(18, 56, 69, 0.15);
+        }
+
+        .restaurant-card .card-body,
+        .business-card .card-body,
+        .event-card .card-body,
+        .mention-card .card-body {
+            padding: 30px;
+        }
+
+        .card-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 58px;
+            height: 58px;
+            margin-bottom: 22px;
+            color: #ffffff;
+            background-color: var(--creek-blue);
+            border-radius: 50%;
+            font-size: 1.45rem;
+        }
+
+        .restaurant-card .card-icon {
+            background-color: var(--sunset);
+        }
+
+        .event-card .card-icon {
+            background-color: var(--marsh-green);
+        }
+
+        .mention-card .card-icon {
+            background-color: var(--creek-dark);
+        }
+
+        .restaurant-card h3,
+        .business-card h3,
+        .event-card h3,
+        .mention-card h3 {
+            color: var(--creek-dark);
+            font-size: 1.35rem;
+            font-weight: 850;
+        }
+
+        .category-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            margin-bottom: 15px;
+            color: var(--creek-blue);
+            background-color: #eaf4f7;
+            border-radius: 50rem;
+            font-size: 0.78rem;
+            font-weight: 850;
+            letter-spacing: 0.03rem;
+            text-transform: uppercase;
+        }
+
+        .restaurant-card .category-badge {
+            color: #9b461f;
+            background-color: #fff0e7;
+        }
+
+        .event-card .category-badge {
+            color: var(--marsh-green);
+            background-color: var(--marsh-light);
+        }
+
+        .address {
+            padding-top: 15px;
+            margin-top: 15px;
+            color: var(--muted-text);
+            border-top: 1px solid #e7ecee;
+            font-size: 0.93rem;
+        }
+
+        .address i {
+            margin-right: 5px;
+            color: var(--sunset);
+        }
+
+        .feature-list {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+        }
+
+        .feature-list li {
+            position: relative;
+            padding: 7px 0 7px 23px;
+        }
+
+        .feature-list li::before {
+            position: absolute;
+            left: 0;
+            color: var(--marsh-green);
+            content: "✓";
+            font-weight: 900;
+        }
+
+        .featured-destination {
+            padding: 48px;
+            color: #ffffff;
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--creek-deep),
+                    var(--creek-blue)
+                );
+            border-radius: 25px;
+            box-shadow: 0 20px 48px rgba(10, 40, 50, 0.2);
+        }
+
+        .featured-destination h2 {
+            font-weight: 900;
+        }
+
+        .featured-destination .feature-list li::before {
+            color: var(--sand);
+        }
+
+        .quick-nav {
+            padding: 22px 0;
+            background-color: var(--sand);
+        }
+
+        .quick-nav a {
+            display: inline-block;
+            padding: 9px 15px;
+            margin: 5px;
+            color: var(--creek-dark);
+            background-color: rgba(255, 255, 255, 0.72);
+            border-radius: 50rem;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .quick-nav a:hover {
+            color: #ffffff;
+            background-color: var(--creek-dark);
+        }
+
+        .schedule-badge {
+            display: inline-block;
+            padding: 5px 11px;
+            margin-top: 8px;
+            color: #ffffff;
+            background-color: var(--marsh-green);
+            border-radius: 50rem;
+            font-size: 0.78rem;
+            font-weight: 800;
+        }
+
+        .working-waterfront {
+            padding: 42px;
+            background-color: #ffffff;
+            border-radius: 22px;
+            box-shadow: 0 12px 35px rgba(18, 56, 69, 0.1);
+        }
+
+        .waterfront-name {
+            padding: 17px;
+            margin-bottom: 13px;
+            background-color: var(--sand-light);
+            border-left: 4px solid var(--sunset);
+            border-radius: 10px;
+        }
+
+        .waterfront-name strong {
+            color: var(--creek-dark);
+        }
+
+        .plan-card {
+            height: 100%;
+            padding: 30px;
+            background-color: #ffffff;
+            border-top: 5px solid var(--creek-blue);
+            border-radius: 17px;
+            box-shadow: 0 8px 27px rgba(18, 56, 69, 0.08);
+        }
+
+        .plan-card h3 {
+            color: var(--creek-dark);
+            font-size: 1.25rem;
+            font-weight: 850;
+        }
+
+        .btn-creek {
+            color: #ffffff;
+            background-color: var(--creek-blue);
+            border-color: var(--creek-blue);
+            font-weight: 800;
+        }
+
+        .btn-creek:hover,
+        .btn-creek:focus {
+            color: #ffffff;
+            background-color: var(--creek-dark);
+            border-color: var(--creek-dark);
+        }
+
+        .btn-sunset {
+            color: #ffffff;
+            background-color: var(--sunset);
+            border-color: var(--sunset);
+            font-weight: 800;
+        }
+
+        .btn-sunset:hover,
+        .btn-sunset:focus {
+            color: #ffffff;
+            background-color: #bd6533;
+            border-color: #bd6533;
+        }
+
+        .honorable-section {
+            background:
+                linear-gradient(
+                    180deg,
+                    var(--sand-light),
+                    #ffffff
+                );
+        }
+
+        .cta-section {
+            padding: 90px 0;
+            color: #ffffff;
+            text-align: center;
+            background:
+                radial-gradient(
+                    circle at top left,
+                    rgba(223, 130, 72, 0.42),
+                    transparent 32%
+                ),
+                linear-gradient(
+                    135deg,
+                    var(--creek-dark),
+                    var(--creek-deep)
+                );
+        }
+
+        footer {
+            padding: 38px 0;
+            color: #d3dde0;
+            background-color: #071d24;
+        }
+
+        footer a {
+            color: #ffffff;
+        }
+
+        @media (max-width: 991.98px) {
+            .hero {
+                min-height: auto;
+                padding: 90px 0;
+            }
+
+            .featured-destination {
+                padding: 35px;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .hero {
+                padding: 70px 0;
+            }
+
+            .section-padding {
+                padding: 60px 0;
+            }
+
+            .intro-panel,
+            .working-waterfront,
+            .featured-destination {
+                padding: 27px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-xl navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#top">
+                <i class="bi bi-water me-2"></i>
+                Shem Creek Events
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavigation"
+                aria-controls="mainNavigation"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+                class="collapse navbar-collapse"
+                id="mainNavigation"
+            >
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">
+                            About
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#restaurants">
+                            Restaurants
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#businesses">
+                            Businesses
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#happenings">
+                            Happenings
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#plan">
+                            Plan a Visit
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#honorable-mentions">
+                            Honorable Mentions
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="top">
+
+        <!-- Hero -->
+        <header class="hero">
+            <div class="container hero-content">
+                <span class="hero-label">
+                    Mount Pleasant, South Carolina
+                </span>
+
+                <h1>
+                    Restaurants, Businesses and Events on Shem Creek
+                </h1>
+
+                <p class="lead">
+                    Shem Creek Events is a local guide to the waterfront
+                    restaurants, seafood markets, marinas, hotels, boat
+                    cruises, kayak rentals, live music and outdoor activities
+                    found around one of Mount Pleasant’s most recognizable
+                    Lowcountry destinations.
+                </p>
+
+                <div class="mt-4">
+                    <a
+                        class="btn btn-sunset btn-lg me-2 mb-2"
+                        href="#restaurants"
+                    >
+                        Explore Restaurants
+                    </a>
+
+                    <a
+                        class="btn btn-outline-light btn-lg mb-2"
+                        href="#happenings"
+                    >
+                        Find Things to Do
+                    </a>
+                </div>
+
+                <div class="row g-3 mt-4">
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="hero-stat">
+                            <strong>Waterfront Dining</strong>
+                            Seafood, cocktails, brunch and sunset views
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="hero-stat">
+                            <strong>On the Water</strong>
+                            Kayaks, paddleboards, rentals and cruises
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="hero-stat">
+                            <strong>Working Creek</strong>
+                            Shrimp boats, fishermen and seafood markets
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="hero-stat">
+                            <strong>Local Events</strong>
+                            Live music, restaurant crawls and gatherings
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Quick navigation -->
+        <div class="quick-nav text-center">
+            <div class="container">
+                <a href="#restaurants">Eat and Drink</a>
+                <a href="#seafood-markets">Fresh Seafood</a>
+                <a href="#water-activities">Water Activities</a>
+                <a href="#happenings">Events</a>
+                <a href="#boardwalk">Boardwalk</a>
+                <a href="#honorable-mentions">Nearby Places</a>
+            </div>
+        </div>
+
+        <!-- About -->
+        <section class="section-padding cream-section" id="about">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-7">
+                        <p class="section-label">
+                            Welcome to the Creek
+                        </p>
+
+                        <h2 class="section-title mb-4">
+                            About Shem Creek
+                        </h2>
+
+                        <p>
+                            Shem Creek is a tidal waterway that flows through
+                            Mount Pleasant and opens into Charleston Harbor.
+                            Its waterfront district combines a working
+                            commercial fishing creek with restaurants, bars,
+                            public boardwalks, marinas and recreational
+                            businesses.
+                        </p>
+
+                        <p>
+                            Visitors come to watch shrimp boats, walk beside
+                            the marsh, photograph sunsets, look for dolphins
+                            and enjoy seafood beside the water. Kayaks,
+                            paddleboards, sailboats, charter boats and fishing
+                            vessels regularly travel through the creek.
+                        </p>
+
+                        <p class="mb-0">
+                            The area can become busy during evenings, weekends
+                            and warm-weather events. Parking is limited in
+                            several sections, so visitors should arrive early,
+                            use designated public parking and follow all posted
+                            parking restrictions.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="intro-panel">
+                            <h3 class="section-title h4 mb-3">
+                                What You Can Find
+                            </h3>
+
+                            <ul class="intro-list">
+                                <li>
+                                    <i class="bi bi-cup-straw"></i>
+                                    Waterfront restaurants and bars
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-music-note-beamed"></i>
+                                    Live music and social gatherings
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-water"></i>
+                                    Kayak and paddleboard rentals
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-sunset"></i>
+                                    Sailing and sunset cruises
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-shop"></i>
+                                    Fresh local seafood markets
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-binoculars"></i>
+                                    Dolphins, birds and marsh wildlife
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-building"></i>
+                                    Waterfront lodging and marina services
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="directory-alert mt-5">
+                    <strong>Directory notice:</strong>
+                    Shem Creek is an active waterfront district. Businesses,
+                    hours, events, docks and operating arrangements can change.
+                    Confirm current details directly with a business before
+                    making a special trip or reservation.
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Boardwalk -->
+        <section class="section-padding" id="boardwalk">
+            <div class="container">
+                <div class="featured-destination">
+                    <div class="row align-items-center g-5">
+                        <div class="col-lg-8">
+                            <span class="hero-label">
+                                Free Waterfront Attraction
+                            </span>
+
+                            <h2>
+                                Shem Creek Park and Boardwalk
+                            </h2>
+
+                            <p class="fs-5">
+                                The public boardwalk is one of the easiest
+                                ways to experience the creek without making a
+                                restaurant reservation or booking a boat.
+                            </p>
+
+                            <p>
+                                Visitors can walk through the salt marsh,
+                                observe working shrimp docks, watch boats pass
+                                through the creek and look toward Charleston
+                                Harbor. The park provides a popular setting
+                                for casual walks, wildlife viewing, fishing
+                                and sunset photography.
+                            </p>
+
+                            <ul class="feature-list">
+                                <li>Public walking trail and boardwalk</li>
+                                <li>Marsh and Charleston Harbor views</li>
+                                <li>Fishing access</li>
+                                <li>ADA-accessible areas</li>
+                                <li>Public parking and restrooms</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="intro-panel text-dark">
+                                <h3 class="section-title h4">
+                                    Park Location
+                                </h3>
+
+                                <p>
+                                    Shrimp Boat Lane<br>
+                                    Mount Pleasant, SC 29464
+                                </p>
+
+                                <p class="mb-0">
+                                    Sunrise and late afternoon are good times
+                                    for cooler temperatures, photography and
+                                    viewing activity around the creek.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Restaurants -->
+        <section
+            class="section-padding cream-section"
+            id="restaurants"
+        >
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-label">
+                        Eat and Drink
+                    </p>
+
+                    <h2 class="section-title">
+                        Restaurants on and Around Shem Creek
+                    </h2>
+
+                    <p class="mb-0">
+                        The Shem Creek dining district ranges from casual
+                        seafood decks and open-air bars to brunch restaurants
+                        and full-service waterfront dining.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- Red's Ice House -->
+                    <div class="col-md-6 col-xl-4">
+                        <article class="restaurant-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-cup-straw"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Waterfront Bar and Seafood
+                                </span>
+
+                                <h3>Red’s Ice House</h3>
+
+                                <p>
+                                    Red’s is a casual Shem Creek gathering
+                                    place known for outdoor decks, seafood,
+                                    sandwiches, cold drinks and a lively
+                                    waterfront atmosphere.
+                                </p>
+
+                                <ul class="feature-list">
+                                    <li>Multiple outdoor seating areas</li>
+                                    <li>Seafood and casual American food</li>
+                                    <li>Creek and boat views</li>
+                                    <li>Popular evening destination</li>
+                                </ul>
+
+                                <p class="address mb-0">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    98 Church Street, Mount Pleasant
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Tavern & Table -->
+                    <div class="col-md-6 col-xl-4">
+                        <article class="restaurant-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-fork-knife"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Waterfront Restaurant
+                                </span>
+
+                                <h3>Tavern &amp; Table</h3>
+
+                                <p>
+                                    Tavern &amp; Table offers a polished but
+                                    relaxed waterfront experience with local
+                                    ingredients, shareable plates, wood-fired
+                                    selections, cocktails and hearty meals.
+                                </p>
+
+                                <ul class="feature-list">
+                                    <li>Indoor and outdoor dining</li>
+                                    <li>Small plates and full meals</li>
+                                    <li>Craft cocktails</li>
+                                    <li>Dockside setting</li>
+                                </ul>
+
+                                <p class="address mb-0">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    100 Church Street, Mount Pleasant
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Saltwater Cowboys -->
+                    <div class="col-md-6 col-xl-4">
+                        <article class="restaurant-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-fire"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Seafood and Barbecue
+                                </span>
+
+                                <h3>Saltwater Cowboys</h3>
+
+                                <p>
+                                    Saltwater Cowboys combines waterfront
+                                    seafood with slow-smoked barbecue,
+                                    cocktails, outdoor seating and regular
+                                    entertainment overlooking the marsh.
+                                </p>
+
+                                <ul class="feature-list">
+                                    <li>Seafood and smoked barbecue</li>
+                                    <li>Large waterfront decks</li>
+                                    <li>Sunset views</li>
+                                    <li>Live music and social events</li>
+                                </ul>
+
+                                <p class="address mb-0">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    130 Mill Street, Mount Pleasant
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Shem Creek Crab House -->
+                    <div class="col-md-6 col-xl-4">
+                        <article class="restaurant-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-basket"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Casual Seafood
+                                </span>
+
+                                <h3>Shem Creek Crab House</h3>
+
+                                <p>
+                                    Shem Creek Crab House serves seafood
+                                    platters, crab dishes, Lowcountry-inspired
+                                    meals and casual drinks in the Mill Street
+                                    section of the district.
+                                </p>
+
+                                <ul class="feature-list">
+                                    <li>Crab and shellfish dishes</li>
+                                    <li>Seafood combinations</li>
+                                    <li>Casual family dining</li>
+                                    <li>Near the marina and boardwalk</li>
+                                </ul>
+
+                                <p class="address mb-0">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    508 Mill Street, Mount Pleasant
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Mill Street Tavern -->
+                    <div class="col-md-6 col-xl-4">
+                        <article class="restaurant-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-egg-fried"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Breakfast and Brunch
+                                </span>
+
+                                <h3>Mill Street Tavern</h3>
+
+                                <p>
+                                    Mill Street Tavern is a popular option for
+                                    breakfast, brunch and lunch close to the
+                                    waterfront. Its rooftop and elevated
+                                    location provide views across the creek.
+                                </p>
+
+                                <ul class="feature-list">
+                                    <li>Breakfast and brunch dishes</li>
+                                    <li>Lunch selections</li>
+                                    <li>Rooftop dining</li>
+                                    <li>Creek district views</li>
+                                </ul>
+
+                                <p class="address mb-0">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    504 Mill Street, Mount Pleasant
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Vickery's -->
+                    <div class="col-md-6 col-xl-4">
+                        <article class="restaurant-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-water"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Waterfront Bar and Grill
+                                </span>
+
+                                <h3>Vickery’s Bar &amp; Grill</h3>
+
+                                <p>
+                                    Vickery’s offers broad views of Shem
+                                    Creek, the marsh and Charleston Harbor
+                                    alongside seafood, sandwiches, salads and
+                                    Southern dishes with international
+                                    influences.
+                                </p>
+
+                                <ul class="feature-list">
+                                    <li>Outdoor deck and dockside seating</li>
+                                    <li>Seafood and Southern dishes</li>
+                                    <li>Sandwiches and salads</li>
+                                    <li>Wide harbor views</li>
+                                </ul>
+
+                                <p class="address mb-0">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    1313 Shrimp Boat Lane, Mount Pleasant
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Water's Edge -->
+                    <div class="col-md-6 col-xl-4">
+                        <article class="restaurant-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-wine"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Full-Service Waterfront Dining
+                                </span>
+
+                                <h3>Water’s Edge</h3>
+
+                                <p>
+                                    Water’s Edge is a full-service seafood
+                                    restaurant overlooking Shem Creek. It
+                                    offers lunch, dinner and Sunday brunch in
+                                    a scenic waterfront setting.
+                                </p>
+
+                                <ul class="feature-list">
+                                    <li>Seafood and chef-prepared entrées</li>
+                                    <li>Indoor and outdoor dining</li>
+                                    <li>Sunday brunch</li>
+                                    <li>Dock-and-dine access</li>
+                                </ul>
+
+                                <p class="address mb-0">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    1407 Shrimp Boat Lane, Mount Pleasant
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Cabana Bar -->
+                    <div class="col-md-6 col-xl-4">
+                        <article class="restaurant-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-umbrella"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Dockside Bar
+                                </span>
+
+                                <h3>Cabana Bar at Water’s Edge</h3>
+
+                                <p>
+                                    The Cabana Bar provides a more casual
+                                    dockside experience beside Water’s Edge,
+                                    with drinks, waterfront views and easy
+                                    access to the Shem Creek boardwalk area.
+                                </p>
+
+                                <ul class="feature-list">
+                                    <li>Outdoor bar service</li>
+                                    <li>Waterfront seating</li>
+                                    <li>Casual social atmosphere</li>
+                                    <li>Near boat and sailing departures</li>
+                                </ul>
+
+                                <p class="address mb-0">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    1407 Shrimp Boat Lane, Mount Pleasant
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- The Wreck -->
+                    <div class="col-md-6 col-xl-4">
+                        <article class="restaurant-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-life-preserver"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Traditional Lowcountry Seafood
+                                </span>
+
+                                <h3>
+                                    The Wreck of the Richard &amp; Charlene
+                                </h3>
+
+                                <p>
+                                    The Wreck is a no-frills Shem Creek
+                                    restaurant known for straightforward
+                                    seafood platters, a working-waterfront
+                                    atmosphere and views of the commercial
+                                    docks.
+                                </p>
+
+                                <ul class="feature-list">
+                                    <li>Fried and grilled seafood</li>
+                                    <li>Traditional Lowcountry sides</li>
+                                    <li>Casual dockside environment</li>
+                                    <li>Dinner service and no reservations</li>
+                                </ul>
+
+                                <p class="address mb-0">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    106 Haddrell Street, Mount Pleasant
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Sunsets -->
+                    <div class="col-md-6 col-xl-4">
+                        <article class="restaurant-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-sunset-fill"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Creekside Dining and Bar
+                                </span>
+
+                                <h3>Sunsets Waterfront Dining</h3>
+
+                                <p>
+                                    Sunsets offers Lowcountry dishes,
+                                    cocktails and colorful creekside seating.
+                                    Its waterfront location is designed around
+                                    casual dining and evening views.
+                                </p>
+
+                                <ul class="feature-list">
+                                    <li>Lowcountry-inspired food</li>
+                                    <li>Waterfront tables</li>
+                                    <li>Craft drinks</li>
+                                    <li>Sunset and boat views</li>
+                                </ul>
+
+                                <p class="address mb-0">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    97 Ronnie Boals Boulevard, Mount Pleasant
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Businesses -->
+        <section class="section-padding" id="businesses">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-label">
+                        Local Businesses
+                    </p>
+
+                    <h2 class="section-title">
+                        Lodging, Marinas and Waterfront Services
+                    </h2>
+
+                    <p class="mb-0">
+                        Shem Creek is more than a dining district. It remains
+                        home to hospitality businesses, public facilities,
+                        commercial docks and marine services.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- Shem Creek Inn -->
+                    <div class="col-md-6 col-xl-4">
+                        <article class="business-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-building"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Waterfront Lodging
+                                </span>
+
+                                <h3>Shem Creek Inn</h3>
+
+                                <p>
+                                    Shem Creek Inn is the primary hotel
+                                    located directly on the creek. Guests are
+                                    within walking distance of restaurants,
+                                    water activities and the boardwalk.
+                                </p>
+
+                                <ul class="feature-list">
+                                    <li>Waterfront guest rooms</li>
+                                    <li>Outdoor pool</li>
+                                    <li>Walkable restaurant access</li>
+                                    <li>Views of boats and the marsh</li>
+                                </ul>
+
+                                <p class="address mb-0">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    1401 Shrimp Boat Lane, Mount Pleasant
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Marina -->
+                    <div class="col-md-6 col-xl-4">
+                        <article class="business-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-life-preserver"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Marina
+                                </span>
+
+                                <h3>Shem Creek Marina</h3>
+
+                                <p>
+                                    Shem Creek Marina provides dry-stack boat
+                                    storage, marine fuel, rentals and services
+                                    for boat owners using Charleston Harbor
+                                    and nearby waterways.
+                                </p>
+
+                                <ul class="feature-list">
+                                    <li>Dry-stack boat storage</li>
+                                    <li>Fuel dock</li>
+                                    <li>Ship store</li>
+                                    <li>Boat rentals and detailing</li>
+                                </ul>
+
+                                <p class="address mb-0">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    526 Mill Street, Mount Pleasant
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Boat Landing -->
+                    <div class="col-md-6 col-xl-4">
+                        <article class="business-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-signpost-split"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Public Boat Access
+                                </span>
+
+                                <h3>Shem Creek Boat Landing</h3>
+
+                                <p>
+                                    The public landing provides creek access
+                                    for boaters. Space and parking can be
+                                    limited, particularly on weekends and
+                                    during peak boating season.
+                                </p>
+
+                                <ul class="feature-list">
+                                    <li>Public boat launching</li>
+                                    <li>Direct creek access</li>
+                                    <li>Near marinas and outfitters</li>
+                                    <li>Access to Charleston Harbor</li>
+                                </ul>
+
+                                <p class="address mb-0">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    515 Mill Street, Mount Pleasant
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seafood Markets -->
+        <section
+            class="section-padding marsh-section"
+            id="seafood-markets"
+        >
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-label">
+                        The Working Waterfront
+                    </p>
+
+                    <h2 class="section-title">
+                        Seafood Markets and Commercial Fishing
+                    </h2>
+
+                    <p class="mb-0">
+                        Commercial fishing is a defining part of Shem Creek.
+                        Local shrimpers and seafood businesses help preserve
+                        the area’s connection to the Lowcountry fishing
+                        industry.
+                    </p>
+                </div>
+
+                <div class="working-waterfront">
+                    <div class="row g-5">
+                        <div class="col-lg-6">
+                            <div class="waterfront-name">
+                                <strong>Mount Pleasant Seafood</strong>
+
+                                <p class="mb-0">
+                                    A long-running local seafood market selling
+                                    fresh fish, shrimp, shellfish and prepared
+                                    seafood products.
+                                </p>
+                            </div>
+
+                            <div class="waterfront-name">
+                                <strong>C.A. Magwood Jr. &amp; Sons</strong>
+
+                                <p class="mb-0">
+                                    A Shem Creek seafood business connected to
+                                    generations of local shrimping and the
+                                    Magwood family’s fishing heritage.
+                                </p>
+                            </div>
+
+                            <div class="waterfront-name">
+                                <strong>Abundant Seafood</strong>
+
+                                <p class="mb-0">
+                                    A commercial fishing operation known for
+                                    supplying locally caught fish to area
+                                    restaurants and participating customers.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="waterfront-name">
+                                <strong>Tarvin’s Seafood</strong>
+
+                                <p class="mb-0">
+                                    A family seafood operation associated with
+                                    Shem Creek’s active commercial fishing
+                                    community.
+                                </p>
+                            </div>
+
+                            <div class="waterfront-name">
+                                <strong>Geechie Seafood</strong>
+
+                                <p class="mb-0">
+                                    A wholesale and retail seafood business
+                                    connected to the creek’s long shrimping
+                                    history.
+                                </p>
+                            </div>
+
+                            <div class="waterfront-name">
+                                <strong>Local Shrimp Boats</strong>
+
+                                <p class="mb-0">
+                                    Commercial vessels continue to operate
+                                    from the creek. Visitors should observe
+                                    docks from public areas and avoid entering
+                                    active work zones.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="directory-alert mt-4">
+                        Seafood selection and direct-to-public availability
+                        depend on the season, weather, fishing conditions and
+                        individual business schedules.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Water activities -->
+        <section class="section-padding" id="water-activities">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-label">
+                        Get on the Water
+                    </p>
+
+                    <h2 class="section-title">
+                        Tours, Rentals and Charters
+                    </h2>
+
+                    <p class="mb-0">
+                        Several operators use Shem Creek as a starting point
+                        for paddle trips, sailing cruises, wildlife tours,
+                        fishing excursions and private celebrations.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="business-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-compass"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Kayak and SUP
+                                </span>
+
+                                <h3>Coastal Expeditions</h3>
+
+                                <p>
+                                    Coastal Expeditions operates a Shem Creek
+                                    outpost with kayak rentals, paddleboard
+                                    rentals, guided eco-tours and wildlife
+                                    experiences.
+                                </p>
+
+                                <ul class="feature-list">
+                                    <li>Guided kayak tours</li>
+                                    <li>Kayak and SUP rentals</li>
+                                    <li>Wildlife interpretation</li>
+                                    <li>Group programs</li>
+                                </ul>
+
+                                <p class="address mb-0">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    514 Mill Street, Mount Pleasant
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="business-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-tsunami"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Paddling Tours
+                                </span>
+
+                                <h3>Nature Adventures</h3>
+
+                                <p>
+                                    Nature Adventures provides guided kayak
+                                    and paddleboard tours, rentals, full-moon
+                                    paddles and marsh-focused outdoor
+                                    experiences.
+                                </p>
+
+                                <ul class="feature-list">
+                                    <li>Kayak tours and rentals</li>
+                                    <li>Paddleboard tours</li>
+                                    <li>Full-moon creek trips</li>
+                                    <li>Eco walking experiences</li>
+                                </ul>
+
+                                <p class="address mb-0">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    1 Shrimp Boat Lane, Mount Pleasant
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="business-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-speedometer2"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Boat Rentals
+                                </span>
+
+                                <h3>Shem Creek Boat Rentals</h3>
+
+                                <p>
+                                    Shem Creek Boat Rentals offers several
+                                    rental durations for customers who want
+                                    to explore the creek, Cooper River and
+                                    Charleston Harbor.
+                                </p>
+
+                                <ul class="feature-list">
+                                    <li>Half-day and full-day rentals</li>
+                                    <li>Different boat sizes</li>
+                                    <li>Fishing excursions</li>
+                                    <li>Local navigation guidance</li>
+                                </ul>
+
+                                <p class="address mb-0">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    1 Seafood Drive, Mount Pleasant
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="business-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-sunset"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Sailing Cruises
+                                </span>
+
+                                <h3>Palmetto Breeze</h3>
+
+                                <p>
+                                    Palmetto Breeze operates public and
+                                    private sailing trips from Shem Creek,
+                                    including sunset cruises, themed sails
+                                    and group charters.
+                                </p>
+
+                                <ul class="feature-list">
+                                    <li>Public sunset cruises</li>
+                                    <li>Private group charters</li>
+                                    <li>Brunch and themed sails</li>
+                                    <li>Charleston Harbor views</li>
+                                </ul>
+
+                                <p class="address mb-0">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    1 Shrimp Boat Lane, Mount Pleasant
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="business-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-people"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Sunset and Private Cruises
+                                </span>
+
+                                <h3>Lowcountry Coastal Excursions</h3>
+
+                                <p>
+                                    This local operator offers cruises that
+                                    depart from the Shem Creek area and travel
+                                    into Charleston Harbor.
+                                </p>
+
+                                <ul class="feature-list">
+                                    <li>Sunset excursions</li>
+                                    <li>Private group cruises</li>
+                                    <li>Harbor sightseeing</li>
+                                    <li>Departure near Tavern &amp; Table</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="business-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-binoculars"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Private Water Tours
+                                </span>
+
+                                <h3>Captain Dan’s Water Tours</h3>
+
+                                <p>
+                                    Captain Dan’s provides private boat tours
+                                    focused on Charleston Harbor, local
+                                    history, wildlife, marshes, beaches and
+                                    barrier islands.
+                                </p>
+
+                                <ul class="feature-list">
+                                    <li>Private sightseeing trips</li>
+                                    <li>Wildlife and marsh tours</li>
+                                    <li>Historic harbor routes</li>
+                                    <li>Custom excursions</li>
+                                </ul>
+
+                                <p class="address mb-0">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    Boarding at Shem Creek Marina
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-6">
+                        <article class="business-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-cup-straw"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Tiki Cruises
+                                </span>
+
+                                <h3>Cruisin’ Tikis Charleston</h3>
+
+                                <p>
+                                    Cruisin’ Tikis offers social tiki-style
+                                    boat trips departing from Shem Creek and
+                                    traveling through local waterways.
+                                </p>
+
+                                <ul class="feature-list">
+                                    <li>Private tiki-boat bookings</li>
+                                    <li>Individual public seats</li>
+                                    <li>Charleston Harbor sightseeing</li>
+                                    <li>Small-group social cruises</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-6">
+                        <article class="business-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-music-note-beamed"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Party and Sunset Boats
+                                </span>
+
+                                <h3>Charleston Party Boat</h3>
+
+                                <p>
+                                    Charleston Party Boat offers public
+                                    sunset trips and private group charters
+                                    departing from Shem Creek.
+                                </p>
+
+                                <ul class="feature-list">
+                                    <li>Daily sunset departures</li>
+                                    <li>Private party cruises</li>
+                                    <li>Multiple group capacities</li>
+                                    <li>Harbor and waterfront views</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Happenings -->
+        <section
+            class="section-padding blue-section"
+            id="happenings"
+        >
+            <div class="container">
+                <div class="section-heading-centered">
+                    <p class="section-label">
+                        What Is Happening
+                    </p>
+
+                    <h2 class="section-title">
+                        Shem Creek Events and Recurring Activities
+                    </h2>
+
+                    <p class="mb-0">
+                        Some happenings follow published calendars, while
+                        others are recurring experiences that take place
+                        throughout the year.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="event-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-music-note-list"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Recurring
+                                </span>
+
+                                <h3>Waterfront Live Music</h3>
+
+                                <p>
+                                    Several creekside restaurants host local
+                                    musicians, DJs and seasonal entertainment
+                                    on their decks or outdoor stages.
+                                </p>
+
+                                <span class="schedule-badge">
+                                    Check weekly schedules
+                                </span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="event-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-cup-straw"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Seasonal Event
+                                </span>
+
+                                <h3>Crawlin’ on the Creek</h3>
+
+                                <p>
+                                    This restaurant crawl brings together
+                                    participating Shem Creek bars and
+                                    restaurants with themed drinks, music and
+                                    dock-to-dock activities.
+                                </p>
+
+                                <span class="schedule-badge">
+                                    Select dates
+                                </span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="event-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-sunset-fill"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Daily Experience
+                                </span>
+
+                                <h3>Sunset on Shem Creek</h3>
+
+                                <p>
+                                    Sunset brings visitors to the boardwalk,
+                                    restaurant decks and boats for colorful
+                                    views across the marsh and Charleston
+                                    Harbor.
+                                </p>
+
+                                <span class="schedule-badge">
+                                    Weather permitting
+                                </span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="event-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-moon-stars"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Scheduled Tour
+                                </span>
+
+                                <h3>Full-Moon Paddle Tours</h3>
+
+                                <p>
+                                    Guided evening paddles provide a different
+                                    view of the creek, marsh and harbor under
+                                    moonlight.
+                                </p>
+
+                                <span class="schedule-badge">
+                                    Based on the lunar calendar
+                                </span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="event-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-binoculars-fill"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Year-Round
+                                </span>
+
+                                <h3>Dolphin and Wildlife Watching</h3>
+
+                                <p>
+                                    Dolphins, pelicans, egrets and other
+                                    wildlife are frequently observed from
+                                    public walks, kayaks and sightseeing
+                                    boats.
+                                </p>
+
+                                <span class="schedule-badge">
+                                    Wildlife sightings are not guaranteed
+                                </span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="event-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-camera-fill"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Year-Round
+                                </span>
+
+                                <h3>Boardwalk Photography</h3>
+
+                                <p>
+                                    The boardwalk is a popular location for
+                                    landscape photos, boat photography,
+                                    marsh views and casual portraits.
+                                </p>
+
+                                <span class="schedule-badge">
+                                    Sunrise and sunset are popular
+                                </span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="event-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-life-preserver"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Seasonal
+                                </span>
+
+                                <h3>Harbor Sailing</h3>
+
+                                <p>
+                                    Public and private sailing trips depart
+                                    from the creek for afternoon, sunset and
+                                    themed excursions through Charleston
+                                    Harbor.
+                                </p>
+
+                                <span class="schedule-badge">
+                                    Reservations recommended
+                                </span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="event-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-basket-fill"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Working Waterfront
+                                </span>
+
+                                <h3>Shrimp Boat Activity</h3>
+
+                                <p>
+                                    Working shrimp and fishing vessels can be
+                                    seen moving through the creek or unloading
+                                    near commercial seafood docks.
+                                </p>
+
+                                <span class="schedule-badge">
+                                    Activity varies by season
+                                </span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="event-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-calendar-heart"></i>
+                                </div>
+
+                                <span class="category-badge">
+                                    Private Events
+                                </span>
+
+                                <h3>Parties and Group Gatherings</h3>
+
+                                <p>
+                                    Restaurants, charter boats and sailing
+                                    operators host birthdays, company outings,
+                                    wedding groups and other private events.
+                                </p>
+
+                                <span class="schedule-badge">
+                                    Advance booking required
+                                </span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Planning -->
+        <section
+            class="section-padding cream-section"
+            id="plan"
+        >
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-label">
+                        Visitor Information
+                    </p>
+
+                    <h2 class="section-title">
+                        Planning a Day at Shem Creek
+                    </h2>
+
+                    <p class="mb-0">
+                        Build your visit around the time of day, expected
+                        crowds and the type of creek experience you want.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-xl-3">
+                        <article class="plan-card">
+                            <h3>
+                                <i class="bi bi-sunrise me-2"></i>
+                                Morning
+                            </h3>
+
+                            <p class="mb-0">
+                                Walk the boardwalk, take an early kayak tour
+                                or visit Mill Street Tavern for breakfast or
+                                brunch before larger crowds arrive.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-3">
+                        <article class="plan-card">
+                            <h3>
+                                <i class="bi bi-sun me-2"></i>
+                                Afternoon
+                            </h3>
+
+                            <p class="mb-0">
+                                Rent a boat or paddleboard, shop for fresh
+                                seafood and stop for a casual waterfront
+                                lunch.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-3">
+                        <article class="plan-card">
+                            <h3>
+                                <i class="bi bi-sunset me-2"></i>
+                                Evening
+                            </h3>
+
+                            <p class="mb-0">
+                                Reserve a waterfront dinner, book a sunset
+                                cruise or arrive early to find a good view
+                                from a restaurant deck.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-3">
+                        <article class="plan-card">
+                            <h3>
+                                <i class="bi bi-p-square me-2"></i>
+                                Parking
+                            </h3>
+
+                            <p class="mb-0">
+                                Use public spaces and obey signs. Do not park
+                                in reserved restaurant, hotel, marina or
+                                business spaces unless you are a customer.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="directory-alert mt-5">
+                    Water conditions, tides, heat and thunderstorms can affect
+                    paddling and boating. Follow operator instructions and
+                    local safety rules when participating in water activities.
+                </div>
+            </div>
+        </section>
+
+        <!-- Honorable Mentions -->
+        <section
+            class="section-padding honorable-section"
+            id="honorable-mentions"
+        >
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-label">
+                        Worth the Short Detour
+                    </p>
+
+                    <h2 class="section-title">
+                        Honorable Mentions Near Shem Creek
+                    </h2>
+
+                    <p class="mb-0">
+                        These businesses and attractions are not directly on
+                        the commercial waterfront, but they are close enough
+                        to include in a Shem Creek or Mount Pleasant outing.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="mention-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-egg-fried"></i>
+                                </div>
+
+                                <h3>Page’s Okra Grill</h3>
+
+                                <p class="mb-0">
+                                    A popular nearby restaurant known for
+                                    breakfast, shrimp and grits, fried seafood
+                                    and Southern comfort food.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="mention-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-water"></i>
+                                </div>
+
+                                <h3>NICO Oysters + Seafood</h3>
+
+                                <p class="mb-0">
+                                    A Coleman Boulevard seafood restaurant
+                                    near the creek specializing in oysters,
+                                    wood-fired seafood and coastal dishes.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="mention-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-cup-straw"></i>
+                                </div>
+
+                                <h3>The Shelter Kitchen + Bar</h3>
+
+                                <p class="mb-0">
+                                    A casual neighborhood restaurant and bar
+                                    near the creek serving brunch, sandwiches
+                                    and drinks.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="mention-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-shop-window"></i>
+                                </div>
+
+                                <h3>Coleman Public House</h3>
+
+                                <p class="mb-0">
+                                    A nearby pub-style restaurant offering
+                                    burgers, sandwiches, craft beer and
+                                    elevated casual food.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="mention-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-fork-knife"></i>
+                                </div>
+
+                                <h3>Grace &amp; Grit</h3>
+
+                                <p class="mb-0">
+                                    A Mount Pleasant restaurant known for
+                                    Southern ingredients, seafood and creative
+                                    versions of grits.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="mention-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-house-heart"></i>
+                                </div>
+
+                                <h3>Post House Inn</h3>
+
+                                <p class="mb-0">
+                                    A historic Old Village inn and restaurant
+                                    offering a quieter dining experience a
+                                    short distance from Shem Creek.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="mention-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-signpost"></i>
+                                </div>
+
+                                <h3>Pitt Street Bridge</h3>
+
+                                <p class="mb-0">
+                                    A peaceful Old Village walking and fishing
+                                    destination with marsh, harbor and skyline
+                                    views.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="mention-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-airplane"></i>
+                                </div>
+
+                                <h3>Patriots Point</h3>
+
+                                <p class="mb-0">
+                                    Home to the USS Yorktown and a major
+                                    maritime museum overlooking Charleston
+                                    Harbor.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                     <div class="col-md-6 col-xl-4">
+                        <article class="mention-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-airplane"></i>
+                                </div>
+
+                                <h3><a href="https://sweetpalmcoffee.com">Sweet Palm Coffee</a></h3>
+
+                                <p class="mb-0">
+                                    Local downtown cafe that sells delicious breakfast brunch fook off King Street. Don't just stop in for the coffee, try a cinnamon roll or the chicken caesar wrap.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="mention-card card">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="bi bi-calendar-event"></i>
+                                </div>
+
+                                <h3>Blessing of the Fleet</h3>
+
+                                <p class="mb-0">
+                                    Mount Pleasant’s annual seafood festival
+                                    honors the local fishing industry. The
+                                    main festival is held at Memorial
+                                    Waterfront Park rather than directly on
+                                    Shem Creek.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <p class="section-label text-white">
+                    Explore Mount Pleasant
+                </p>
+
+                <h2 class="display-5 fw-bold">
+                    Spend a Day on Shem Creek
+                </h2>
+
+                <p
+                    class="fs-5 mx-auto mb-4"
+                    style="max-width: 820px;"
+                >
+                    Walk beside the marsh, watch the shrimp boats, eat fresh
+                    seafood, paddle the creek and finish your visit with live
+                    music or a Lowcountry sunset.
+                </p>
+
+                <a
+                    class="btn btn-sunset btn-lg me-2 mb-2"
+                    href="#restaurants"
+                >
+                    Find a Restaurant
+                </a>
+
+                <a
+                    class="btn btn-outline-light btn-lg mb-2"
+                    href="#water-activities"
+                >
+                    Explore the Water
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-7">
+                    <h2 class="h5 text-white fw-bold">
+                        <i class="bi bi-water me-2"></i>
+                        Shem Creek Events
+                    </h2>
+
+                    <p class="small mb-0">
+                        A local guide to restaurants, businesses, activities
+                        and happenings around Shem Creek in Mount Pleasant,
+                        South Carolina.
+                    </p>
+                </div>
+
+                <div class="col-md-5 text-md-end">
+                    <a
+                        class="text-decoration-none me-3"
+                        href="#restaurants"
+                    >
+                        Restaurants
+                    </a>
+
+                    <a
+                        class="text-decoration-none me-3"
+                        href="#happenings"
+                    >
+                        Events
+                    </a>
+
+                    <a
+                        class="text-decoration-none"
+                        href="#top"
+                    >
+                        Back to Top
+                    </a>
+                </div>
+            </div>
+
+            <hr class="border-secondary my-4">
+
+            <p class="small text-center mb-0">
+                Business hours, event dates, menus, tour schedules and
+                availability are subject to change. Shem Creek Events is an
+                independent informational guide.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+</body>
+</html>
